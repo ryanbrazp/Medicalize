@@ -1,6 +1,7 @@
 import HistoryList from '@/components/HistoryList';
 import SearchBar from '@/components/searchBar';
 import SessionTitle from '@/components/SessionTitle';
+import colors from '@/constants/Colors';
 import { useState } from 'react';
 import { Text, View, StyleSheet, ScrollView } from 'react-native'
 
@@ -26,17 +27,18 @@ export default function home(){
                 onChange={handleInputChange}
             />
             
-
-            <View style={styles.session}>
+          <ScrollView style={styles.areaScroll}>
+              <View style={styles.session}>
                 <SessionTitle text='Ultimas Pesquisas' />
-                <HistoryList data={data} />
-            </View>
+                  <HistoryList data={data} />
+              </View>
+          
 
-            <View style={styles.session}>
-                <SessionTitle text='Interações Recentes' />
-                <HistoryList data={data} />
-            </View>
-            
+              <View style={styles.session}>
+                  <SessionTitle text='Interações Recentes' />
+                  <HistoryList data={data} />
+              </View>
+            </ScrollView>
         </View >
     );
 
@@ -89,7 +91,15 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFF',
         padding: 16
     },
+    areaScroll: {
+      marginTop: 16
+    },
+    row: {
+      backgroundColor: colors.lightGrey,
+      padding: 12,
+      borderRadius: 10
+    },
     session: {
-        marginTop: 28
+        marginTop: 16
     }
 })

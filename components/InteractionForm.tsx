@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 'auto'
     },
     buttonText: {
-        color: '#FFF',
+        color: colors.black,
         fontWeight: 'bold',
     },
 });

@@ -15,24 +15,24 @@ const SearchBar: React.FC<SearchBarProps> = ({ placeholder, onChange }) => {
     const handleInputChange = (text: string) => {
         setInputValue(text);
         if (onChange) {
-          onChange(text); 
+            onChange(text);
         }
-      };
+    };
 
-    return(
+    return (
         <View style={styles.container}>
             <View style={styles.textField}>
                 <Feather name="search" size={20} color={colors.darkGrey} />
-                <TextInput 
+                <TextInput
                     style={styles.input}
                     placeholder={placeholder}
                     placeholderTextColor={colors.darkGrey}
-                    value={inputValue} 
-                    onChangeText={handleInputChange} 
+                    value={inputValue}
+                    onChangeText={handleInputChange}
                 />
             </View>
             <TouchableOpacity style={styles.photoButton}>
-                <Feather name="camera" size={20} color={colors.darkGreen} />
+                <Feather name="camera" size={20} color={colors.black} />
             </TouchableOpacity>
         </View>
     );
@@ -46,15 +46,15 @@ const styles = StyleSheet.create({
     },
     textField: {
         flex: 1,
-        flexDirection: 'row', 
+        flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: colors.lightGrey,
+        backgroundColor: colors.lightGrey, /* COLOCAR NA CONSTANTE DE CORES */
         borderRadius: 40,
         paddingHorizontal: 10,
         height: 40,
     },
     input: {
-        flex: 1, 
+        flex: 1,
         fontFamily: 'Inter_400Regular',
         fontSize: 16,
         color: colors.black,
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     photoButton: {
         width: 40,
         height: 40,
-        backgroundColor: colors.lightGreen,
+        backgroundColor: "#A7D397", /* COLOCAR NA CONSTANTE DE CORES */
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 40

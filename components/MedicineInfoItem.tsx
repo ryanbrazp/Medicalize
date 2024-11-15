@@ -16,25 +16,24 @@ const MedicineInfoItem: React.FC<MedicineInfoItemProps> = ({ title, description 
     const toggleBody = () => setIsOpen(prevState => !prevState);
 
     return(
-        <View style={[styles.container, isOpen && styles.containerOpen]}>
-            <TouchableOpacity onPress={toggleBody}>
-            <View style={styles.header}>
-                <Text style={styles.title}>{title}</Text>
-                
+        <TouchableOpacity onPress={toggleBody}>
+            <View style={[styles.container, isOpen && styles.containerOpen]}> 
+                <View style={styles.header}>
+                    <Text style={styles.title}>{title}</Text>
                     <Feather 
                         name={isOpen ? "chevron-up" : "chevron-down"} 
                         size={24} 
                         color={colors.black} 
                     />
-                
-            </View>
-            </TouchableOpacity>
-            {isOpen && (
-                <View style={[styles.body, isOpen && styles.bodyOpen]}>
-                    <Text style={styles.description}>{description}</Text>
                 </View>
-            )}
-        </View>
+                
+                {isOpen && (
+                    <View style={[styles.body, isOpen && styles.bodyOpen]}>
+                        <Text style={styles.description}>{description}</Text>
+                    </View>
+                )}
+            </View>
+        </TouchableOpacity>
     );
 }
 
@@ -53,11 +52,12 @@ const styles = StyleSheet.create({
     header: {
         flexDirection: 'row',
         justifyContent: "space-between",
+        alignItems: 'center',
         width: '100%'
     },
     title: {
         fontSize: 16,
-        fontFamily: 'Inter_600SemiBold'
+        fontFamily: 'Inter_600SemiBold',
     },
     body: {
         height: 0, 
