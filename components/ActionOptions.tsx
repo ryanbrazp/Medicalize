@@ -45,7 +45,7 @@ const ActionOptions: React.FC<ActionOptionsProps> = ({ imageSource, title, subti
                 <Text style={{
                     fontSize: 18,
                     fontFamily: 'Inter_700Bold',
-                    color: colors.darkGreen
+                    color: colors.green
                 }}>{title}</Text>
                 <Text style={{
                     fontSize: 16,

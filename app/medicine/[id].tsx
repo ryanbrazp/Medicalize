@@ -150,16 +150,18 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFF'
     },
     header: {
-        backgroundColor: colors.green,
-        padding: 16,
+        height: 150,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: colors.green
     },
     name: {
-        fontSize: 16,
+        fontSize: 18,
         fontFamily: 'Inter_600SemiBold',
         color: '#FFF'
     },
     activeIngredients: {
-        fontSize: 14,
+        fontSize: 16,
         fontFamily: 'Inter_400Regular',
         color: '#FFF'
     },

@@ -54,7 +54,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ placeholder, onChange }) => {
                 style={styles.photoButton}
             >
                 <Link href="/camera">
-                    <Feather name="camera" size={20} color={colors.black} />
+                    <Feather name="camera" size={20} color={colors.white} />
                 </Link>
             </TouchableOpacity>
         </View>
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     photoButton: {
         width: 40,
         height: 40,
-        backgroundColor: "#A7D397", /* COLOCAR NA CONSTANTE DE CORES */
+        backgroundColor: colors.green, /* COLOCAR NA CONSTANTE DE CORES */
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 40

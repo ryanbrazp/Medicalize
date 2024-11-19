@@ -180,7 +180,8 @@ const styles = StyleSheet.create({
   },
   btnText:{
     fontSize: 16,
-    fontFamily: 'Inter_600SemiBold'
+    fontFamily: 'Inter_600SemiBold',
+    color: colors.white
   },
   image: {
     width: '100%',

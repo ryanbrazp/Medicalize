@@ -40,7 +40,7 @@ export default function Layout() {
           headerStyle: {
             backgroundColor: colors.white,
           },
-          headerTintColor: colors.green,
+          headerTintColor: colors.black,
           headerTitleStyle: {
             fontWeight: 'bold',
           },
