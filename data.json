@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "nome": "Dicloridrato de levocetirizina",
+        "princípio ativo": "Dicloridrato de levocetirizina",
+        "indicações": ["Rinite alérgica", "Urticária crônica idiopática"],
+        "contraindicações": [
+            "Hipersensibilidade à levocetirizina ou a outros componentes da fórmula",
+            "Doença renal em estágio avançado",
+            "Hemodiálise",
+            "Insuficiência renal grave"
+        ],
+        "modo de uso": [
+            "O dicloridrato de levocetirizina deve ser administrado por via oral, e pode ser ingerido antes ou após as refeições. O comprimido deve ser engolido de uma só vez, com a ajuda de líquidos. Não pode ser partido ou mastigado.",
+            {
+                "Uso em Adultos e Adolescentes a partir de 12 anos": "A dose diária recomendada é de 5 mg (1 comprimido), por via oral, a cada 24 horas (1 vez ao dia).",
+                "Crianças de 6 a 12 anos": "A dose diária recomendada é de 5 mg (1 comprimido), por via oral, a cada 24 horas (1 vez ao dia).O limite máximo diário de administração recomendado é 5 mg."
+            }
+        ],
+        "Efeitos Colaterais": [
+            "Náuseas",
+            "Vômitos",
+            "Diarreia",
+            "Fadiga",
+            "Constipação",
+            "Xerostomia",
+            "Otite média",
+            "Nasofaringite",
+            "Tosse",
+            "Epistaxe",
+            "Faringite",
+            "Febre",
+            "Sonolência"
+        ],
+        "interações medicamentosas": [
+            "Álcool",
+            "Alizaprida",
+            "Bromoprida",
+            "Clometiazol",
+            "Metoclopramida",
+            "Sulfato de Magnésio",
+            "Anfetaminas",
+            "Hialuronidase",
+            "Anticolinérgicos",
+            "ISRS",
+            "Clozapina",
+            "Flunitrazepam",
+            "Opioides",
+            "Zolpidem",
+            "Inibidores de acetilcolinesterase",
+            "Levossulpirida",
+            "Talidomida",
+            "Tiazídicos"
+        ]
+    }
+]
