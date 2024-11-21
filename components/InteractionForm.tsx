@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, TouchableOpacity, Text } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, Text, Alert } from 'react-native';
 import Feather from '@expo/vector-icons/Feather';
 import CustomInput from './CustomInput';
 import colors from '../constants/Colors';
@@ -9,6 +9,10 @@ const InteractionForm: React.FC = () => {
     const [inputValues, setInputValues] = useState<string[]>(['', '']); // Inicia com dois inputs vazios
 
     const handleAddInput = () => {
+        if (inputCount >= 5) {
+            Alert.alert('Limite atingido', 'Você pode adicionar no máximo 5 medicamentos.');
+            return;
+        }
         setInputCount((prevCount) => prevCount + 1);
         setInputValues((prevValues) => [...prevValues, '']); // Adiciona um novo valor vazio
     };
@@ -53,17 +57,15 @@ const InteractionForm: React.FC = () => {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: colors.lightGrey,
-        borderRadius: 10,
-        padding: 16,
-        gap: 16
+        gap: 16,
+        flex: 1,
     },
     fields: {
         gap: 16,
     },
     buttons: {
         gap: 16,
-        alignItems: 'center'
+        alignItems: 'center',
     },
     button: {
         width: 30,
@@ -72,7 +74,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderWidth: 2,
         borderColor: colors.darkGreen,
-        borderRadius: 30
+        borderRadius: 30,
     },
     divider: {
         width: '100%',
@@ -86,7 +88,6 @@ const styles = StyleSheet.create({
         borderRadius: 40,
         justifyContent: 'center',
         alignItems: 'center',
-        marginHorizontal: 'auto'
     },
     buttonText: {
         color: colors.black,

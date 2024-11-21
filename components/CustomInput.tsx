@@ -1,5 +1,6 @@
 import React from 'react';
 import { TextInput, StyleSheet, TextInputProps } from 'react-native';
+import colors from '../constants/Colors';
 
 interface CustomInputProps extends TextInputProps {
     placeholder: string;
@@ -29,6 +30,8 @@ const styles = StyleSheet.create({
         borderRadius: 40,
         paddingHorizontal: 16,
         height: 40,
+        borderWidth: 1,
+        borderColor: colors.darkGrey
     },
 });
 
