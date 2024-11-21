@@ -7,13 +7,14 @@ import MenuOptions from '../../components/MenuOptions';
 
 export default function Medicine() {
     // Obtendo o id da URL
-    const { id } = useLocalSearchParams();
+    const { name } = useLocalSearchParams();
 
     // Dados de exemplo
     const data = [
         {
             "id": 1,
             "nome": "Dicloridrato de levocetirizina",
+            "classificacao": "anti-histamínico",
             "princípio ativo": "Dicloridrato de levocetirizina",
             "indicações": ["Rinite alérgica", "Urticária crônica idiopática"],
             "contraindicações": [
@@ -64,11 +65,44 @@ export default function Medicine() {
                 "Talidomida",
                 "Tiazídicos"
             ]
+        },
+        {
+            "id": 2,
+            "nome": "Bromoprida",
+            "princípio ativo": "Bromoprida",
+            "classificacao": ["antiemético", "procinético"],
+            "indicações": ["Distúrbios da motilidade gastrintestinal", "Refluxo gastroesofágico", "Náuseas e vômitos", "Facilitação de procedimentos radiológicos do trato gastrintestinal"],
+            "contraindicações": [
+                "alergia conhecida à bromoprida ou a qualquer um dos componentes do medicamento",
+                "pacientes com histórico de epilepsia ou demais distúrbios convulsivos",
+                "casos de feocromocitoma, um tipo de tumor raro que pode causar hipertensão",
+                "obstrução ou perfuração intestinal, onde o aumento da motilidade pode ser prejudicial"
+            ],
+            "modo de uso": ["24 gotas correspondem a 1 (um) mL. Utilize o gotejador conforme orientação médica ou coloque em uma colher a quantidade exata e então administre a dose pela via oral (boca)."],
+            "Efeitos Colaterais": [
+                "Inquietação",
+                "sonolência",
+                "fadiga",
+                "lassidão"
+            ],
+            "interações medicamentosas": [
+                "Drogas anticolinérgicas",
+                "Analgésicos narcóticos",
+                "Sedativos",
+                "Hipnóticos",
+                "Narcóticos",
+                "Tranquilizantes",
+                "Inibidores da monoaminoxidase (IMAOs)",
+                "Digoxina",
+                "Paracetamol",
+                "Tetraciclina",
+                "Levodopa"
+            ]
         }
     ];
 
     // Verificar se o id existe e buscar o medicamento correspondente
-    const medicine = data.find(item => item.id === Number(id));
+    const medicine = data.find(item => item.nome === name);
 
     if (!medicine) {
         return (

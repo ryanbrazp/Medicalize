@@ -20,13 +20,13 @@ export default function MenuOptions() {
                     width: 40,
                     height: 40,
                     borderRadius: 40,
-                    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
                     justifyContent: 'center',
                     alignItems: 'center'
                 }}
             >
                 <Link href="/">
-                    <Feather name="home" size={24} color={colors.black} />
+                    <Feather name="home" size={24} color={colors.white} />
                 </Link>
             </TouchableOpacity>
 
@@ -35,13 +35,13 @@ export default function MenuOptions() {
                     width: 40,
                     height: 40,
                     borderRadius: 40,
-                    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
                     justifyContent: 'center',
                     alignItems: 'center'
                 }}
             >
             <Link href="/camera">
-                <Feather name="camera" size={24} color={colors.black} />
+                <Feather name="camera" size={24} color={colors.white} />
             </Link>
             </TouchableOpacity>
         </View>

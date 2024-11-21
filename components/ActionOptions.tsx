@@ -3,6 +3,8 @@ import { View, Image, ImageSourcePropType, Text } from 'react-native';
 import SearchBar from './SearchBar';
 import colors from '../constants/Colors';
 
+import Feather from '@expo/vector-icons/Feather';
+
 interface ActionOptionsProps {
     imageSource: ImageSourcePropType;
     title: string;
@@ -33,7 +35,7 @@ const ActionOptions: React.FC<ActionOptionsProps> = ({ imageSource, title, subti
                     source={imageSource} 
                     resizeMode='cover'
                     style={{width: '100%', height: '100%'}}
-                />
+                /> 
             </View>
             <View
                 style={{

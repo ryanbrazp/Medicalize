@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         borderWidth: 2,
-        borderColor: colors.darkGreen,
+        borderColor: colors.green,
         borderRadius: 30,
     },
     divider: {
@@ -84,13 +84,13 @@ const styles = StyleSheet.create({
     submitButton: {
         width: '100%',
         height: 40,
-        backgroundColor: colors.darkGreen,
+        backgroundColor: colors.green,
         borderRadius: 40,
         justifyContent: 'center',
         alignItems: 'center',
     },
     buttonText: {
-        color: colors.black,
+        color: colors.white,
         fontWeight: 'bold',
     },
 });

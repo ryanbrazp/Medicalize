@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
-    bottom: 20,
+    bottom: 0,
     padding: 20
   },
   camButton: {
@@ -166,10 +166,10 @@ const styles = StyleSheet.create({
     gap: 16,
     padding: 16,
     position: 'absolute',
-    bottom: 20,
+    bottom: 0,
     left: 0,
     zIndex: 10,
-    backgroundColor: "rgba(255, 255, 255, 0.)"
+    backgroundColor: "rgba(255, 255, 255, 0.3)"
   },
   btn: {
     flexGrow: 1,
