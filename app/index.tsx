@@ -4,6 +4,7 @@ import { useState } from "react";
 import SearchBar from "../components/SearchBar";
 import { Link } from "expo-router";
 import MenuOptions from "../components/MenuOptions";
+import DeveloperBrand from "../components/DeveloperBrand";
 
 export default function Home() {
 
@@ -38,6 +39,7 @@ export default function Home() {
                     />
                 </Link>
             </View>
+            <DeveloperBrand />
         </View>
     );
 }

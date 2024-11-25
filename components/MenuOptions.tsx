@@ -12,7 +12,9 @@ export default function MenuOptions() {
                 padding: 8,
                 flexDirection: 'row',
                 gap: 8,
-                backgroundColor: colors.green
+                backgroundColor: colors.green,
+                position: "absolute",
+                bottom: 16
             }}
         >
             <TouchableOpacity

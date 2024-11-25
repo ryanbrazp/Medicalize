@@ -109,6 +109,7 @@ export default function Medicine() {
             <>
                 <Stack.Screen options={{ headerTitle: "Resultado"}} />
                 <View style={{
+                    flex: 1,
                     width: "100%",
                     height: '100%',
                     justifyContent: "center",
@@ -120,6 +121,8 @@ export default function Medicine() {
                         fontFamily: 'Inter_400Regular',
                         color: 'rgba(0,0,0,0.4)'
                     }}>Medicamento não encontrado</Text>
+
+                    <MenuOptions />
                 </View>
             </>
         );

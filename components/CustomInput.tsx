@@ -15,7 +15,6 @@ const CustomInput: React.FC<CustomInputProps> = ({ placeholder, value, onChangeT
             placeholder={placeholder}
             value={value}
             onChangeText={(text) => {
-                console.log(`Input alterado para: ${text}`);
                 onChangeText(text);
             }}
         />

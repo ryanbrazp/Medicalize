@@ -20,8 +20,6 @@ export default function Interaction(){
           <View 
               style={{
                 width: '100%',
-                position: 'absolute',
-                bottom:32,
                 alignItems: 'center',
                 backgroundColor: 'transparent'
             }}>
