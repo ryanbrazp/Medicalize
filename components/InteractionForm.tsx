@@ -123,7 +123,12 @@ const InteractionForm: React.FC = () => {
                 {interactionResult.length > 0 &&
                 interactionResult[0] !== 'Nenhuma interação de risco encontrada.' ? (
                 <>
-                    <Text style={{ fontFamily: 'Inter_400Regular', marginBottom: 8 }}>Risco de interação:</Text>
+                    <Text style={{ 
+                      fontFamily: 'Inter_400Regular', 
+                      fontSize: 16, 
+                      textAlign: 'center',
+                      color: colors.red 
+                    }}>Risco de interação</Text>
                     {interactionResult.map((line, index) => (
                     <View key={`interaction-${index}`} style={{ flexDirection: 'row', alignItems: 'center' }}>
                         <Entypo name="dot-single" size={24} color="black" />
@@ -132,14 +137,27 @@ const InteractionForm: React.FC = () => {
                     ))}
                 </>
                 ) : (
-                <Text style={{ fontFamily: 'Inter_400Regular' }}>Nenhuma interação de risco encontrada.</Text>
+                <Text style={{ fontFamily: 'Inter_400Regular', fontSize: 16 }}>Nenhuma interação de risco encontrada.</Text>
                 )}
             </View>
 
-            <View style={{ width: '100%', justifyContent: 'flex-end', paddingHorizontal: 16, marginBottom: 16 }}>
-                <TouchableOpacity style={styles.modalButton} onPress={() => setModalVisible(false)}>
-                    <Text style={styles.buttonText}>OK</Text>
-                </TouchableOpacity>
+            <View style={{ width: '100%', justifyContent: 'center', paddingHorizontal: 16, marginBottom: 16 }}>
+            <TouchableOpacity 
+              style={[
+                styles.modalButton, 
+                { backgroundColor: interactionResult.length > 0 && interactionResult[0] !== 'Nenhuma interação de risco encontrada.' 
+                    ? colors.red 
+                    : colors.green 
+                }
+              ]} 
+              onPress={() => setModalVisible(false)}
+            >
+              <Text style={{
+                color: colors.white,
+                fontFamily: 'Inter_500Medium', 
+                fontSize: 16
+              }}>OK</Text>
+            </TouchableOpacity>
             </View>
             </View>
         </View>
@@ -184,8 +202,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttonText: {
-    color: colors.black,
-    fontWeight: 'bold',
+    color: colors.white,
+    fontFamily: 'Inter_500Medium', 
+    fontSize: 16
   },
   modalOverlay: {
     flex: 1,
@@ -207,12 +226,15 @@ const styles = StyleSheet.create({
   },
   interactionItem: {
     fontFamily: 'Inter_400Regular',
-    color: 'red',
+    color: colors.black,
     fontSize: 16,
   },
   modalButton: {
     justifyContent: 'center',
-    alignItems: 'flex-end',
+    alignItems: 'center',
+    height: 40,
+    backgroundColor: colors.red,
+    borderRadius: 40
   },
 });
 

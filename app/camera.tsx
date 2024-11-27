@@ -44,7 +44,7 @@ function Photo() {
     }
   };
 
-  /* const handleConvertToBase64AndSend = async () => {
+  const handleConvertToBase64AndSend = async () => {
     if (imageSource !== '') {
       try {
         const base64Image = await RNFS.readFile(imageSource, 'base64');
@@ -53,13 +53,13 @@ function Photo() {
         console.error('Erro ao converter a imagem em Base64:', error);
       }
     }
-  }; */
-
-  const handleNavigateToPage = () => {
-    const id = '1'; // Substitua pelo ID dinâmico que você tem
-    // Navegar para a página [id] passando o ID como parâmetro
-    router.push(`../medicine/${id}`);
   };
+
+  /* const handleNavigateToPage = () => {
+    const id = '1'; 
+    
+    router.push(`../medicine/${id}`);
+  }; */
 
   if (device == null) {
     return <Text>Camera not available</Text>;
@@ -112,7 +112,7 @@ function Photo() {
 
             <TouchableOpacity
               style={[styles.btn, {backgroundColor: colors.green}]}
-              onPress={()=> handleNavigateToPage()}
+              onPress={()=> handleConvertToBase64AndSend()}
             >
               <Text style={styles.btnText}>Confirmar</Text>
             </TouchableOpacity>
