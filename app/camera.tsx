@@ -6,7 +6,7 @@ import {
   Text,
   Linking,
   Image,
-  StatusBar, 
+  StatusBar,
   SafeAreaView
 } from 'react-native';
 import { Camera, useCameraDevices } from "react-native-vision-camera";
@@ -25,12 +25,17 @@ function Photo() {
 
   const [showCamera, setShowCamera] = useState(true); // Abre a câmera diretamente
   const [imageSource, setImageSource] = useState('');
+  const [hasPermission, setHasPermission] = useState(false); // Estado para controle da permissão
 
   useEffect(() => {
     async function getPermission() {
-      const permisson = await Camera.requestCameraPermission();
-      console.log(`Camera permisson status: ${permisson}`);
-      if (permisson === 'denied') await Linking.openSettings();
+      const permission = await Camera.requestCameraPermission();
+      console.log(`Camera permission status: ${permission}`);
+      if (permission === 'denied') {
+        await Linking.openSettings();
+      } else {
+        setHasPermission(true); // Atualiza o estado de permissão para "true"
+      }
     }
     getPermission();
   }, []);
@@ -44,22 +49,14 @@ function Photo() {
     }
   };
 
-  const handleConvertToBase64AndSend = async () => {
-    if (imageSource !== '') {
-      try {
-        const base64Image = await RNFS.readFile(imageSource, 'base64');
-        console.log('Imagem em Base64:', base64Image);
-      } catch (error) {
-        console.error('Erro ao converter a imagem em Base64:', error);
-      }
-    }
+  const handleNavigateToPage = () => {
+    const name = 'Dicloridrato de levocetirizina'; 
+    router.push(`../medicine/${name}`);
   };
 
-  /* const handleNavigateToPage = () => {
-    const id = '1'; 
-    
-    router.push(`../medicine/${id}`);
-  }; */
+  if (!hasPermission) {
+    return <></>;
+  }
 
   if (device == null) {
     return <Text>Camera not available</Text>;
@@ -112,7 +109,7 @@ function Photo() {
 
             <TouchableOpacity
               style={[styles.btn, {backgroundColor: colors.green}]}
-              onPress={()=> handleConvertToBase64AndSend()}
+              onPress={()=> handleNavigateToPage()}
             >
               <Text style={styles.btnText}>Confirmar</Text>
             </TouchableOpacity>
