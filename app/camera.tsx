@@ -49,10 +49,42 @@ function Photo() {
     }
   };
 
-  const handleNavigateToPage = () => {
+  /* const handleNavigateToPage = () => {
     const name = 'Dicloridrato de levocetirizina'; 
     router.push(`../medicine/${name}`);
+  }; */
+
+
+  const uploadImage = async () => {
+    try {
+      const formData = new FormData();
+      const file = {
+        uri: `file://${imageSource}`, // Caminho absoluto do arquivo
+        name: 'photo.jpg', // Nome do arquivo enviado
+        type: 'image/jpeg', // Tipo MIME
+      };
+  
+      // Converta explicitamente para um tipo aceito
+      formData.append('image', file as unknown as Blob);
+  
+      const response = await fetch('http://192.168.1.221:5001/extrair-texto', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+        body: formData,
+      });
+  
+      const result = await response.json();
+      console.log('Upload concluído:', result);
+      alert('Imagem enviada com sucesso!');
+    } catch (error) {
+      console.error('Erro ao enviar a imagem:', error);
+      alert('Erro ao enviar a imagem. Tente novamente.');
+    }
   };
+  
+
 
   if (!hasPermission) {
     return <></>;
@@ -109,7 +141,7 @@ function Photo() {
 
             <TouchableOpacity
               style={[styles.btn, {backgroundColor: colors.green}]}
-              onPress={()=> handleNavigateToPage()}
+              onPress={()=> uploadImage()}
             >
               <Text style={styles.btnText}>Confirmar</Text>
             </TouchableOpacity>
