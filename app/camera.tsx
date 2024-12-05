@@ -49,13 +49,13 @@ function Photo() {
     }
   };
 
-  /* const handleNavigateToPage = () => {
-    const name = 'Dicloridrato de levocetirizina'; 
+  const handleNavigateToPage = () => {
+    const name = 'Domperidona'; 
     router.push(`../medicine/${name}`);
-  }; */
+  }; 
 
 
-  const uploadImage = async () => {
+  /* const uploadImage = async () => {
     try {
       const formData = new FormData();
       const file = {
@@ -82,7 +82,7 @@ function Photo() {
       console.error('Erro ao enviar a imagem:', error);
       alert('Erro ao enviar a imagem. Tente novamente.');
     }
-  };
+  }; */
   
 
 
@@ -141,7 +141,7 @@ function Photo() {
 
             <TouchableOpacity
               style={[styles.btn, {backgroundColor: colors.green}]}
-              onPress={()=> uploadImage()}
+              onPress={()=> /* uploadImage() */ handleNavigateToPage()}
             >
               <Text style={styles.btnText}>Confirmar</Text>
             </TouchableOpacity>

@@ -98,7 +98,57 @@ export default function Medicine() {
                 "Tetraciclina",
                 "Levodopa"
             ]
-        }
+        },
+        {
+            "id": 3,
+            "nome": "Domperidona",
+            "classificacao": "antiemético, procinético",
+            "princípio ativo": "Domperidona",
+            "indicações": [
+              "Náuseas e vômitos",
+              "Distúrbios gastrointestinais",
+              "Gastroparésia",
+              "Sintomas de refluxo gastroesofágico",
+              "Tratamento sintomático de náuseas e vômitos associados à quimioterapia ou radioterapia"
+            ],
+            "contraindicações": [
+              "Hipersensibilidade à domperidona ou a outros componentes da fórmula",
+              "Histórico de arritmias cardíacas graves",
+              "Prolongamento do intervalo QT",
+              "Insuficiência hepática grave",
+              "Bloqueio intestinal ou obstrução gastrointestinal",
+              "Perda de consciência inexplicada"
+            ],
+            "modo de uso": [
+              "A domperidona deve ser administrada por via oral, geralmente antes das refeições e ao deitar. O comprimido deve ser engolido com a ajuda de líquidos e não deve ser mastigado.",
+              {
+                "Uso em Adultos e Adolescentes a partir de 12 anos": "A dose recomendada é de 10 mg (1 comprimido), 3 vezes ao dia, antes das refeições e ao deitar.",
+                "Crianças de 5 a 12 anos": "A dose recomendada é de 0,25 mg/kg de peso corporal, 3 vezes ao dia, antes das refeições e ao deitar. Não deve ultrapassar a dose máxima de 30 mg por dia."
+              }
+            ],
+            "Efeitos Colaterais": [
+              "Dor abdominal",
+              "Diarreia",
+              "Gases",
+              "Boca seca",
+              "Sonolência",
+              "Cefaleia",
+              "Vertigem",
+              "Tontura",
+              "Arritmias cardíacas (raramente)",
+              "Reações alérgicas (erupção cutânea, prurido)"
+            ],
+            "interações medicamentosas": [
+              "Inibidores da CYP3A4 (ex. ketoconazol, itraconazol)",
+              "Antifúngicos",
+              "Antibióticos macrolídeos",
+              "Antidepressivos (ISRS)",
+              "Antipsicóticos",
+              "Medicamentos que afetam o intervalo QT",
+              "Medicamentos que causam inibição da função hepática",
+              "Antagonistas dopaminérgicos"
+            ]
+          }
     ];
 
     // Verificar se o id existe e buscar o medicamento correspondente

@@ -40,7 +40,7 @@ const InteractionForm: React.FC = () => {
     }
 
     try {
-      const response = await axios.post('http://192.168.1.221:8080/check-interactions', {
+      const response = await axios.post('https://api-interaction.onrender.com/check-interactions', {
         medications: uniqueValues,
       });
 
